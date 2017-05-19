@@ -3,10 +3,13 @@ var paddle = {
     y:100,
     w:30,
     h:100,
-    speed: 2,
+    speed: 5,
     update: function(){
         if(this.direction === "up"){
             this.y = this.y - this.speed;
+        }
+        if(this.direction === "down"){
+            this.y = this.y + this.speed;
         }
     },
     render: function(ctx){
